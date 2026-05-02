@@ -1,0 +1,9 @@
+path: C:/Users/19037/Desktop/yolo26/export_sentry_1_240_yolo
+train: images/train
+val: images/val
+
+nc: 1
+names:
+  0: sentry
+
+kpt_shape: [8, 3]

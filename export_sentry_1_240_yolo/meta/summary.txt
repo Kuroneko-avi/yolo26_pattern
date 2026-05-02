@@ -1,0 +1,7 @@
+total_images_expected=240
+images_copied=240
+json_found=240
+json_missing=0
+txt_with_boxes=240
+txt_empty=0
+total_boxes=336
