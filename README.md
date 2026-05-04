@@ -150,7 +150,28 @@ docs/sentry_annotation_workflow.md
 推荐方式：
 
 ```text
-本机部署 CVAT -> 同事浏览器访问 -> 同事标注 -> 负责人验收 -> 导出 YOLO-Pose -> 本机训练 -> 输出 best.pt
+本机部署 CVAT -> 同事通过 Tailscale 浏览器访问 -> 同事标注 -> 负责人验收 -> 导出 YOLO-Pose -> 本机训练 -> 输出 best.pt
+```
+
+当前 CVAT 访问地址：
+
+```text
+http://100.90.129.85:8080
+```
+
+CVAT 运行在 `/home/ywag/cvat`，当前 `.env` 使用：
+
+```text
+CVAT_HOST=100.90.129.85
+```
+
+管理员常用命令：
+
+```bash
+cd ~/cvat
+sudo docker compose ps
+sudo docker compose up -d
+sudo docker compose logs -f
 ```
 
 ## 环境复现
