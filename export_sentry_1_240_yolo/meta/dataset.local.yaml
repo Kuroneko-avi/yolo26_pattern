@@ -1,0 +1,9 @@
+path: /home/ywag/yolo26_pattern/export_sentry_1_240_yolo
+train: images/train
+val: images/val
+
+nc: 1
+names:
+  0: sentry
+
+kpt_shape: [8, 3]
