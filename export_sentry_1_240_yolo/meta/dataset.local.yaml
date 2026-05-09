@@ -1,4 +1,4 @@
-path: /home/ywag/yolo26_pattern/export_sentry_1_240_yolo
+path: /home/kellen/yolo26_pattern/export_sentry_1_240_yolo
 train: images/train
 val: images/val
 

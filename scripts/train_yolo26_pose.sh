@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CONDA_ROOT="${CONDA_ROOT:-/home/ywag/miniconda3}"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CONDA_ROOT="${CONDA_ROOT:-/home/kellen/anaconda3}"
 YOLO="${CONDA_ROOT}/envs/yolo26/bin/yolo"
-DATA="/home/ywag/yolo26_pattern/export_sentry_1_240_yolo/meta/dataset.local.yaml"
-PROJECT="${PROJECT:-/home/ywag/yolo26_pattern/runs}"
-MODEL="${MODEL:-/home/ywag/yolo26_pattern/yolo26n-pose.pt}"
+DATA="${DATA:-${REPO_ROOT}/export_sentry_1_240_yolo/meta/dataset.local.yaml}"
+PROJECT="${PROJECT:-${REPO_ROOT}/runs}"
+MODEL="${MODEL:-${REPO_ROOT}/yolo26n-pose.pt}"
 EPOCHS="${EPOCHS:-100}"
 IMGSZ="${IMGSZ:-640}"
 BATCH="${BATCH:-96}"

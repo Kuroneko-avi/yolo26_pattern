@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CONDA_ROOT="${CONDA_ROOT:-/home/ywag/miniconda3}"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CONDA_ROOT="${CONDA_ROOT:-/home/kellen/anaconda3}"
 YOLO="${CONDA_ROOT}/envs/yolo26/bin/yolo"
-MODEL="${MODEL:-/home/ywag/yolo26_pattern/runs/yolo26_pose_train/weights/best.pt}"
-SOURCE="${1:-/home/ywag/yolo26_pattern/export_sentry_1_240_yolo/images/val}"
+MODEL="${MODEL:-${REPO_ROOT}/runs/yolo26_pose_train/weights/best.pt}"
+SOURCE="${1:-${REPO_ROOT}/export_sentry_1_240_yolo/images/val}"
 
 "${YOLO}" pose predict \
   model="${MODEL}" \
@@ -12,6 +13,6 @@ SOURCE="${1:-/home/ywag/yolo26_pattern/export_sentry_1_240_yolo/images/val}"
   imgsz=640 \
   conf=0.25 \
   save=True \
-  project=/home/ywag/yolo26_pattern/runs \
+  project="${REPO_ROOT}/runs" \
   name=yolo26_pose_predict \
   exist_ok=True

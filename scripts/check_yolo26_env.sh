@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CONDA_ROOT="${CONDA_ROOT:-/home/ywag/miniconda3}"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CONDA_ROOT="${CONDA_ROOT:-/home/kellen/anaconda3}"
 ENV_PY="${CONDA_ROOT}/envs/yolo26/bin/python"
 ENV_YOLO="${CONDA_ROOT}/envs/yolo26/bin/yolo"
-DATA_YAML="/home/ywag/yolo26_pattern/export_sentry_1_240_yolo/meta/dataset.local.yaml"
+DATA_YAML="${REPO_ROOT}/export_sentry_1_240_yolo/meta/dataset.local.yaml"
 
 echo "[system]"
 uname -a
@@ -29,7 +30,7 @@ echo "[ultralytics]"
 
 echo "[dataset]"
 test -f "${DATA_YAML}"
-find /home/ywag/yolo26_pattern/export_sentry_1_240_yolo/images/train -type f | wc -l
-find /home/ywag/yolo26_pattern/export_sentry_1_240_yolo/images/val -type f | wc -l
-find /home/ywag/yolo26_pattern/export_sentry_1_240_yolo/labels/train -type f | wc -l
-find /home/ywag/yolo26_pattern/export_sentry_1_240_yolo/labels/val -type f | wc -l
+find "${REPO_ROOT}/export_sentry_1_240_yolo/images/train" -type f | wc -l
+find "${REPO_ROOT}/export_sentry_1_240_yolo/images/val" -type f | wc -l
+find "${REPO_ROOT}/export_sentry_1_240_yolo/labels/train" -type f | wc -l
+find "${REPO_ROOT}/export_sentry_1_240_yolo/labels/val" -type f | wc -l

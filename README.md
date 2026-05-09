@@ -40,7 +40,7 @@
 主训练环境是 Conda：
 
 ```text
-/home/ywag/miniconda3/envs/yolo26
+/home/kellen/anaconda3/envs/yolo26
 ```
 
 训练默认使用 GPU `0`，也就是 RTX 4080。Docker 已安装，但 Docker GPU runtime 不是当前训练主流程。
@@ -48,7 +48,7 @@
 检查环境：
 
 ```bash
-/home/ywag/miniconda3/envs/yolo26/bin/yolo checks
+/home/kellen/anaconda3/envs/yolo26/bin/yolo checks
 ```
 
 ## 数据集配置
@@ -79,7 +79,7 @@ bash scripts/train_yolo26_pose.sh
 脚本默认参数：
 
 ```text
-MODEL=/home/ywag/yolo26_pattern/yolo26n-pose.pt
+MODEL=/home/kellen/yolo26_pattern/yolo26n-pose.pt
 EPOCHS=100
 IMGSZ=640
 BATCH=96
@@ -159,7 +159,7 @@ docs/sentry_annotation_workflow.md
 http://100.90.129.85:8080
 ```
 
-CVAT 运行在 `/home/ywag/cvat`，当前 `.env` 使用：
+CVAT 运行在 `/home/kellen/cvat`，当前 `.env` 使用：
 
 ```text
 CVAT_HOST=100.90.129.85
@@ -187,13 +187,13 @@ conda-yolo26-explicit.txt
 常用恢复方式：
 
 ```bash
-/home/ywag/miniconda3/bin/conda env create -f environment-yolo26.yaml
+/home/kellen/anaconda3/bin/conda env create -f environment-yolo26.yaml
 ```
 
 更严格的 Conda 显式包列表恢复可参考：
 
 ```bash
-/home/ywag/miniconda3/bin/conda create --name yolo26 --file conda-yolo26-explicit.txt
+/home/kellen/anaconda3/bin/conda create --name yolo26 --file conda-yolo26-explicit.txt
 ```
 
 ## Git 说明

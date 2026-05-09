@@ -34,8 +34,8 @@ This repository is not responsible for:
 
 ## Environment
 
-- Prefer the existing Conda environment at `/home/ywag/miniconda3/envs/yolo26`.
-- Use `/home/ywag/miniconda3/envs/yolo26/bin/yolo` for Ultralytics commands.
+- Prefer the existing Conda environment at `/home/kellen/anaconda3/envs/yolo26`.
+- Use `/home/kellen/anaconda3/envs/yolo26/bin/yolo` for Ultralytics commands.
 - Default training device is GPU `0`, the RTX 4080.
 - Do not make Docker GPU runtime a blocker for normal training; Conda is the current primary training path.
 
@@ -44,7 +44,7 @@ This repository is not responsible for:
 Check environment:
 
 ```bash
-/home/ywag/miniconda3/envs/yolo26/bin/yolo checks
+/home/kellen/anaconda3/envs/yolo26/bin/yolo checks
 ```
 
 Train:

@@ -12,13 +12,13 @@
 2. 确认能访问负责人主机：
 
 ```powershell
-tailscale ping 100.90.129.85
+tailscale ping 100.127.219.54
 ```
 
 3. 用 Chrome 或 Edge 打开：
 
 ```text
-http://100.90.129.85:8080
+http://100.127.219.54:8080
 ```
 
 4. 登录负责人分配的 CVAT 账号。
@@ -38,14 +38,14 @@ http://100.90.129.85:8080
 ```bash
 cd ~/cvat
 sudo docker compose ps
-curl -I http://100.90.129.85:8080
+curl -I http://100.127.219.54:8080
 ```
 
 2. 确认 CVAT Host 配置：
 
 ```text
-/home/ywag/cvat/.env
-CVAT_HOST=100.90.129.85
+/home/kellen/cvat/.env
+CVAT_HOST=100.127.219.54
 ```
 
 3. 给同事创建账号并分配 Job。
@@ -75,27 +75,27 @@ CVAT_HOST=100.90.129.85
 当前统一使用 Tailscale IP 访问：
 
 ```text
-http://100.90.129.85:8080
+http://100.127.219.54:8080
 ```
 
 负责人主机当前 CVAT 配置：
 
 ```text
-/home/ywag/cvat/.env
-CVAT_HOST=100.90.129.85
+/home/kellen/cvat/.env
+CVAT_HOST=100.127.219.54
 ```
 
 同事访问前需要确认：
 
 - 已安装并登录 Tailscale。
 - 已加入和负责人主机相同的 Tailscale 网络。
-- 浏览器访问 `http://100.90.129.85:8080`。
+- 浏览器访问 `http://100.127.219.54:8080`。
 - 不要访问自己的 `localhost:8080`。
 
 如果同事无法访问，先在同事电脑上测试：
 
 ```bash
-tailscale ping 100.90.129.85
+tailscale ping 100.127.219.54
 ```
 
 如果 `tailscale ping` 不通，说明不是 CVAT 问题，优先检查 Tailscale 登录、设备授权和网络 ACL。
@@ -104,8 +104,8 @@ tailscale ping 100.90.129.85
 
 - 负责人主机是否开机。
 - CVAT Docker 容器是否运行。
-- Tailscale IP 是否仍为 `100.90.129.85`。
-- `/home/ywag/cvat/.env` 里的 `CVAT_HOST` 是否正确。
+- Tailscale IP 是否仍为 `100.127.219.54`。
+- `/home/kellen/cvat/.env` 里的 `CVAT_HOST` 是否正确。
 - `8080` 端口是否正在监听。
 
 负责人本机检查命令：
@@ -113,8 +113,8 @@ tailscale ping 100.90.129.85
 ```bash
 cd ~/cvat
 sudo docker compose ps
-curl -I http://100.90.129.85:8080
-curl -sS http://100.90.129.85:8080/api/server/about
+curl -I http://100.127.219.54:8080
+curl -sS http://100.127.219.54:8080/api/server/about
 ```
 
 注意：当前 CVAT Host 已切到 Tailscale IP，局域网地址 `http://10.148.201.42:8080` 返回 `404` 属于正常现象。
@@ -141,17 +141,17 @@ https://tailscale.com/download/windows
 
 ```powershell
 tailscale status
-tailscale ping 100.90.129.85
+tailscale ping 100.127.219.54
 ```
 
-只要 `tailscale ping 100.90.129.85` 能通，就说明同事电脑已经能通过 Tailscale 到达负责人主机。
+只要 `tailscale ping 100.127.219.54` 能通，就说明同事电脑已经能通过 Tailscale 到达负责人主机。
 
 ### 3.3 打开 CVAT
 
 使用 Chrome 或 Edge 访问：
 
 ```text
-http://100.90.129.85:8080
+http://100.127.219.54:8080
 ```
 
 登录负责人分配的 CVAT 账号，然后进入分配给自己的 Job。
@@ -161,7 +161,7 @@ http://100.90.129.85:8080
 如果浏览器打不开：
 
 - 先确认 Tailscale 是 Connected。
-- 再执行 `tailscale ping 100.90.129.85`。
+- 再执行 `tailscale ping 100.127.219.54`。
 - 如果 ping 不通，联系负责人检查 Tailscale 设备授权。
 - 如果 ping 通但网页打不开，联系负责人检查 CVAT 服务。
 
@@ -345,7 +345,7 @@ p0, p1, p2, p3, p4, p5, p6, p7
 CVAT 源码和 Docker Compose 目录：
 
 ```text
-/home/ywag/cvat
+/home/kellen/cvat
 ```
 
 启动或恢复服务：
@@ -410,7 +410,7 @@ tailscale ip -4
 如果 Tailscale IP 改变，需要更新：
 
 ```text
-/home/ywag/cvat/.env
+/home/kellen/cvat/.env
 CVAT_HOST=<新的 Tailscale IP>
 ```
 
@@ -505,7 +505,7 @@ batch_003
 同事只需要浏览器：
 
 ```text
-Chrome / Edge -> http://100.90.129.85:8080 -> 登录 -> 进入分配的 Job
+Chrome / Edge -> http://100.127.219.54:8080 -> 登录 -> 进入分配的 Job
 ```
 
 每张图处理顺序：
