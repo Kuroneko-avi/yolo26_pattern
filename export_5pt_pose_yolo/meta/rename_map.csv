@@ -1,0 +1,101 @@
+new_id,split,new_image,new_label,source,source_package,source_image_member,source_label_member,object_count,is_background
+000001,train,images/train/000001.png,labels/train/000001.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-76.png,labels/train/screenshot-76.txt,2,False
+000002,train,images/train/000002.png,labels/train/000002.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-77.png,labels/train/screenshot-77.txt,2,False
+000003,train,images/train/000003.png,labels/train/000003.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-78.png,labels/train/screenshot-78.txt,2,False
+000004,train,images/train/000004.png,labels/train/000004.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-79.png,labels/train/screenshot-79.txt,2,False
+000005,train,images/train/000005.png,labels/train/000005.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-80.png,labels/train/screenshot-80.txt,2,False
+000006,train,images/train/000006.png,labels/train/000006.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-81.png,labels/train/screenshot-81.txt,2,False
+000007,train,images/train/000007.png,labels/train/000007.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-83.png,labels/train/screenshot-83.txt,2,False
+000008,train,images/train/000008.png,labels/train/000008.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-84.png,labels/train/screenshot-84.txt,2,False
+000009,train,images/train/000009.png,labels/train/000009.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-85.png,labels/train/screenshot-85.txt,2,False
+000010,train,images/train/000010.png,labels/train/000010.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-87.png,labels/train/screenshot-87.txt,2,False
+000011,train,images/train/000011.png,labels/train/000011.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-88.png,labels/train/screenshot-88.txt,2,False
+000012,train,images/train/000012.png,labels/train/000012.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-89.png,labels/train/screenshot-89.txt,2,False
+000013,train,images/train/000013.png,labels/train/000013.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-9.png,labels/train/screenshot-9.txt,2,False
+000014,train,images/train/000014.png,labels/train/000014.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-90.png,labels/train/screenshot-90.txt,2,False
+000015,train,images/train/000015.png,labels/train/000015.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-91.png,labels/train/screenshot-91.txt,2,False
+000016,train,images/train/000016.png,labels/train/000016.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-92.png,labels/train/screenshot-92.txt,2,False
+000017,train,images/train/000017.png,labels/train/000017.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-93.png,labels/train/screenshot-93.txt,2,False
+000018,train,images/train/000018.png,labels/train/000018.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-96.png,labels/train/screenshot-96.txt,0,True
+000019,train,images/train/000019.png,labels/train/000019.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-97.png,labels/train/screenshot-97.txt,0,True
+000020,train,images/train/000020.png,labels/train/000020.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-98.png,labels/train/screenshot-98.txt,0,True
+000021,train,images/train/000021.png,labels/train/000021.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-99.png,labels/train/screenshot-99.txt,2,False
+000022,train,images/train/000022.png,labels/train/000022.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-51.png,labels/train/screenshot-51.txt,2,False
+000023,train,images/train/000023.png,labels/train/000023.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-52.png,labels/train/screenshot-52.txt,2,False
+000024,train,images/train/000024.png,labels/train/000024.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-53.png,labels/train/screenshot-53.txt,2,False
+000025,train,images/train/000025.png,labels/train/000025.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-54.png,labels/train/screenshot-54.txt,2,False
+000026,train,images/train/000026.png,labels/train/000026.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-55.png,labels/train/screenshot-55.txt,2,False
+000027,train,images/train/000027.png,labels/train/000027.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-56.png,labels/train/screenshot-56.txt,2,False
+000028,train,images/train/000028.png,labels/train/000028.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-58.png,labels/train/screenshot-58.txt,2,False
+000029,train,images/train/000029.png,labels/train/000029.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-60.png,labels/train/screenshot-60.txt,2,False
+000030,train,images/train/000030.png,labels/train/000030.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-61.png,labels/train/screenshot-61.txt,2,False
+000031,train,images/train/000031.png,labels/train/000031.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-62.png,labels/train/screenshot-62.txt,2,False
+000032,train,images/train/000032.png,labels/train/000032.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-63.png,labels/train/screenshot-63.txt,2,False
+000033,train,images/train/000033.png,labels/train/000033.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-65.png,labels/train/screenshot-65.txt,2,False
+000034,train,images/train/000034.png,labels/train/000034.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-66.png,labels/train/screenshot-66.txt,2,False
+000035,train,images/train/000035.png,labels/train/000035.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-67.png,labels/train/screenshot-67.txt,2,False
+000036,train,images/train/000036.png,labels/train/000036.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-68.png,labels/train/screenshot-68.txt,2,False
+000037,train,images/train/000037.png,labels/train/000037.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-69.png,labels/train/screenshot-69.txt,2,False
+000038,train,images/train/000038.png,labels/train/000038.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-70.png,labels/train/screenshot-70.txt,2,False
+000039,train,images/train/000039.png,labels/train/000039.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-71.png,labels/train/screenshot-71.txt,2,False
+000040,train,images/train/000040.png,labels/train/000040.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-72.png,labels/train/screenshot-72.txt,2,False
+000041,train,images/train/000041.png,labels/train/000041.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-73.png,labels/train/screenshot-73.txt,2,False
+000042,train,images/train/000042.png,labels/train/000042.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-74.png,labels/train/screenshot-74.txt,2,False
+000043,train,images/train/000043.png,labels/train/000043.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-75.png,labels/train/screenshot-75.txt,2,False
+000044,train,images/train/000044.png,labels/train/000044.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-1.png,labels/train/screenshot-1.txt,2,False
+000045,train,images/train/000045.png,labels/train/000045.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-10.png,labels/train/screenshot-10.txt,2,False
+000046,train,images/train/000046.png,labels/train/000046.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-100.png,labels/train/screenshot-100.txt,2,False
+000047,train,images/train/000047.png,labels/train/000047.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-101.png,labels/train/screenshot-101.txt,2,False
+000048,train,images/train/000048.png,labels/train/000048.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-102.png,labels/train/screenshot-102.txt,2,False
+000049,train,images/train/000049.png,labels/train/000049.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-103.png,labels/train/screenshot-103.txt,2,False
+000050,train,images/train/000050.png,labels/train/000050.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-11.png,labels/train/screenshot-11.txt,2,False
+000051,train,images/train/000051.png,labels/train/000051.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-13.png,labels/train/screenshot-13.txt,2,False
+000052,train,images/train/000052.png,labels/train/000052.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-14.png,labels/train/screenshot-14.txt,2,False
+000053,train,images/train/000053.png,labels/train/000053.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-15.png,labels/train/screenshot-15.txt,2,False
+000054,train,images/train/000054.png,labels/train/000054.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-16.png,labels/train/screenshot-16.txt,2,False
+000055,train,images/train/000055.png,labels/train/000055.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-17.png,labels/train/screenshot-17.txt,2,False
+000056,train,images/train/000056.png,labels/train/000056.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-19.png,labels/train/screenshot-19.txt,2,False
+000057,train,images/train/000057.png,labels/train/000057.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-2.png,labels/train/screenshot-2.txt,2,False
+000058,train,images/train/000058.png,labels/train/000058.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-22.png,labels/train/screenshot-22.txt,2,False
+000059,train,images/train/000059.png,labels/train/000059.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-23.png,labels/train/screenshot-23.txt,2,False
+000060,train,images/train/000060.png,labels/train/000060.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-24.png,labels/train/screenshot-24.txt,2,False
+000061,train,images/train/000061.png,labels/train/000061.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-25.png,labels/train/screenshot-25.txt,2,False
+000062,train,images/train/000062.png,labels/train/000062.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-26.png,labels/train/screenshot-26.txt,2,False
+000063,train,images/train/000063.png,labels/train/000063.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-27.png,labels/train/screenshot-27.txt,2,False
+000064,train,images/train/000064.png,labels/train/000064.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-28.png,labels/train/screenshot-28.txt,2,False
+000065,train,images/train/000065.png,labels/train/000065.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-29.png,labels/train/screenshot-29.txt,2,False
+000066,train,images/train/000066.png,labels/train/000066.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-3.png,labels/train/screenshot-3.txt,2,False
+000067,train,images/train/000067.png,labels/train/000067.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-31.png,labels/train/screenshot-31.txt,2,False
+000068,train,images/train/000068.png,labels/train/000068.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-33.png,labels/train/screenshot-33.txt,2,False
+000069,train,images/train/000069.png,labels/train/000069.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-36.png,labels/train/screenshot-36.txt,2,False
+000070,train,images/train/000070.png,labels/train/000070.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-37.png,labels/train/screenshot-37.txt,2,False
+000071,train,images/train/000071.png,labels/train/000071.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-38.png,labels/train/screenshot-38.txt,2,False
+000072,train,images/train/000072.png,labels/train/000072.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-39.png,labels/train/screenshot-39.txt,2,False
+000073,train,images/train/000073.png,labels/train/000073.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-4.png,labels/train/screenshot-4.txt,2,False
+000074,train,images/train/000074.png,labels/train/000074.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-40.png,labels/train/screenshot-40.txt,2,False
+000075,train,images/train/000075.png,labels/train/000075.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-41.png,labels/train/screenshot-41.txt,2,False
+000076,train,images/train/000076.png,labels/train/000076.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-42.png,labels/train/screenshot-42.txt,2,False
+000077,train,images/train/000077.png,labels/train/000077.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-43.png,labels/train/screenshot-43.txt,2,False
+000078,train,images/train/000078.png,labels/train/000078.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-48.png,labels/train/screenshot-48.txt,2,False
+000079,train,images/train/000079.png,labels/train/000079.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-49.png,labels/train/screenshot-49.txt,2,False
+000080,train,images/train/000080.png,labels/train/000080.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-5.png,labels/train/screenshot-5.txt,2,False
+000081,train,images/train/000081.png,labels/train/000081.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-51.png,labels/train/screenshot-51.txt,2,False
+000082,val,images/val/000082.png,labels/val/000082.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-8.png,labels/train/screenshot-8.txt,2,False
+000083,val,images/val/000083.png,labels/val/000083.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-82.png,labels/train/screenshot-82.txt,2,False
+000084,val,images/val/000084.png,labels/val/000084.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-86.png,labels/train/screenshot-86.txt,2,False
+000085,val,images/val/000085.png,labels/val/000085.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-94.png,labels/train/screenshot-94.txt,2,False
+000086,val,images/val/000086.png,labels/val/000086.txt,job72,/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip,images/train/screenshot-95.png,labels/train/screenshot-95.txt,0,True
+000087,val,images/val/000087.png,labels/val/000087.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-57.png,labels/train/screenshot-57.txt,2,False
+000088,val,images/val/000088.png,labels/val/000088.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-59.png,labels/train/screenshot-59.txt,2,False
+000089,val,images/val/000089.png,labels/val/000089.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-6.png,labels/train/screenshot-6.txt,2,False
+000090,val,images/val/000090.png,labels/val/000090.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-64.png,labels/train/screenshot-64.txt,2,False
+000091,val,images/val/000091.png,labels/val/000091.txt,wu1,/home/kellen/下载/第一组WU_1.zip,images/train/screenshot-7.png,labels/train/screenshot-7.txt,2,False
+000092,val,images/val/000092.png,labels/val/000092.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-12.png,labels/train/screenshot-12.txt,2,False
+000093,val,images/val/000093.png,labels/val/000093.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-18.png,labels/train/screenshot-18.txt,2,False
+000094,val,images/val/000094.png,labels/val/000094.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-20.png,labels/train/screenshot-20.txt,2,False
+000095,val,images/val/000095.png,labels/val/000095.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-21.png,labels/train/screenshot-21.txt,2,False
+000096,val,images/val/000096.png,labels/val/000096.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-32.png,labels/train/screenshot-32.txt,2,False
+000097,val,images/val/000097.png,labels/val/000097.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-34.png,labels/train/screenshot-34.txt,2,False
+000098,val,images/val/000098.png,labels/val/000098.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-35.png,labels/train/screenshot-35.txt,2,False
+000099,val,images/val/000099.png,labels/val/000099.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-47.png,labels/train/screenshot-47.txt,2,False
+000100,val,images/val/000100.png,labels/val/000100.txt,wu2,/home/kellen/下载/第一组WU_2.zip,images/train/screenshot-50.png,labels/train/screenshot-50.txt,2,False

@@ -1,16 +1,67 @@
 # yolo26_pattern
 
-`yolo26_pattern` 是一个 YOLO26-Pose 训练仓库，当前目标是训练 `sentry` 图案识别与 8 个固定顺序关键点定位模型，并输出 `.pt` 权重供后续相机/PnP 程序使用。
+`yolo26_pattern` 是一个 YOLO26-Pose 训练仓库，用来管理本机 YOLO-Pose 数据集、训练模型、做可视化验收，并输出 `.pt` 权重给后续相机/PnP 或其他下游程序使用。
 
-## 项目目标
+本仓库只负责数据集、训练、验证和权重导出；不负责生产相机程序、PnP 解算、机器人控制或部署系统。
 
-- 输入：标注好的 YOLO-Pose 数据集。
-- 输出：YOLO26-Pose `.pt` 权重。
-- 当前类别：`sentry`。
-- 当前标注格式：每个完整目标 1 个 bbox + 8 个 keypoints。
-- 当前训练策略：只训练完整可见图案；遮挡、出画、不完整、点位不确定的目标不标注。
+## 当前状态
 
-本仓库只负责训练与验收，不负责最终相机应用、PnP 解算或部署系统。
+当前主数据集是 5 点 YOLO-Pose 数据集：
+
+```text
+export_5pt_pose_yolo/
+```
+
+数据集来源：
+
+```text
+/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip
+/home/kellen/下载/第一组WU_1.zip
+/home/kellen/下载/第一组WU_2.zip
+```
+
+清洗结果：
+
+```text
+total_images=100
+total_objects=192
+background_images=4
+train_images=81
+train_objects=156
+train_background_images=3
+val_images=19
+val_objects=36
+val_background_images=1
+```
+
+其中 `job_72` 里的 `screenshot-95/96/97/98` 已确认是背景图，已保留为空 label 背景样本。
+
+数据集配置：
+
+```text
+export_5pt_pose_yolo/meta/dataset.local.yaml
+```
+
+配置要点：
+
+```yaml
+nc: 1
+names:
+  0: 大符标注
+kpt_shape: [5, 3]
+```
+
+重命名与来源追溯表：
+
+```text
+export_5pt_pose_yolo/meta/rename_map.csv
+```
+
+仓库中还保留历史 8 点 `sentry` 数据集：
+
+```text
+export_sentry_1_240_yolo/
+```
 
 ## 目录结构
 
@@ -20,11 +71,15 @@
 ├── README.md
 ├── docs/
 │   └── sentry_annotation_workflow.md
-├── export_sentry_1_240_yolo/
+├── export_5pt_pose_yolo/
 │   ├── images/
 │   ├── labels/
 │   └── meta/
-│       └── dataset.local.yaml
+│       ├── dataset.local.yaml
+│       ├── rename_map.csv
+│       ├── summary.json
+│       └── summary.txt
+├── export_sentry_1_240_yolo/
 ├── scripts/
 │   ├── check_yolo26_env.sh
 │   ├── predict_yolo26_pose.sh
@@ -35,7 +90,7 @@
 └── conda-yolo26-explicit.txt
 ```
 
-## 当前环境
+## 环境
 
 主训练环境是 Conda：
 
@@ -43,7 +98,13 @@
 /home/kellen/anaconda3/envs/yolo26
 ```
 
-训练默认使用 GPU `0`，也就是 RTX 4080。Docker 已安装，但 Docker GPU runtime 不是当前训练主流程。
+Ultralytics 命令：
+
+```text
+/home/kellen/anaconda3/envs/yolo26/bin/yolo
+```
+
+默认使用 GPU `0`。
 
 检查环境：
 
@@ -51,26 +112,9 @@
 /home/kellen/anaconda3/envs/yolo26/bin/yolo checks
 ```
 
-## 数据集配置
-
-本机数据集配置：
-
-```text
-export_sentry_1_240_yolo/meta/dataset.local.yaml
-```
-
-当前配置要点：
-
-```yaml
-nc: 1
-names:
-  0: sentry
-kpt_shape: [8, 3]
-```
-
 ## 训练
 
-默认训练：
+默认训练脚本：
 
 ```bash
 bash scripts/train_yolo26_pose.sh
@@ -79,122 +123,97 @@ bash scripts/train_yolo26_pose.sh
 脚本默认参数：
 
 ```text
-MODEL=/home/kellen/yolo26_pattern/yolo26n-pose.pt
+DATA=export_5pt_pose_yolo/meta/dataset.local.yaml
+MODEL=yolo26n-pose.pt
 EPOCHS=100
+PATIENCE=100
 IMGSZ=640
 BATCH=96
 DEVICE=0
 WORKERS=8
 CACHE=ram
+NAME=yolo26_pose_train
 ```
 
-保守 batch 训练：
+继续使用已有 5 点权重做长轮次训练：
 
 ```bash
-BATCH=64 bash scripts/train_yolo26_pose.sh
+DATA=/home/kellen/yolo26_pattern/export_5pt_pose_yolo/meta/dataset.local.yaml \
+MODEL=/home/kellen/yolo26_pattern/runs/export_5pt_pose_long_800e_p200/weights/best.pt \
+EPOCHS=800 \
+PATIENCE=200 \
+BATCH=64 \
+NAME=export_5pt_pose_long_800e_p200 \
+bash scripts/train_yolo26_pose.sh
 ```
 
-自定义运行名：
+脚本支持继续透传 Ultralytics 原生参数，例如：
 
 ```bash
-NAME=sentry_pose_v002 EPOCHS=200 bash scripts/train_yolo26_pose.sh
+EPOCHS=300 PATIENCE=0 BATCH=64 bash scripts/train_yolo26_pose.sh cos_lr=True
+```
+
+## 当前最佳 5 点模型
+
+最新长轮次训练：
+
+```text
+runs/export_5pt_pose_long_800e_p200/
+```
+
+训练配置：
+
+```text
+epochs=800
+patience=200
+实际早停=205 epochs
+best epoch=5
+```
+
+权重：
+
+```text
+runs/export_5pt_pose_long_800e_p200/weights/best.pt
+```
+
+最终验证结果：
+
+```text
+Box(P,R,mAP50,mAP50-95)=0.917,0.972,0.985,0.931
+Pose(P,R,mAP50,mAP50-95)=0.917,0.972,0.985,0.985
 ```
 
 ## 预测验收
 
-使用训练好的 `best.pt` 预测验证集：
+默认预测当前 5 点 val：
 
 ```bash
-MODEL=runs/yolo26_pose_train/weights/best.pt bash scripts/predict_yolo26_pose.sh
+MODEL=runs/export_5pt_pose_long_800e_p200/weights/best.pt \
+NAME=export_5pt_pose_long_800e_p200_predict \
+bash scripts/predict_yolo26_pose.sh
 ```
 
-预测结果默认保存到：
+指定 source：
+
+```bash
+MODEL=runs/export_5pt_pose_long_800e_p200/weights/best.pt \
+SOURCE=/path/to/images \
+NAME=my_predict \
+bash scripts/predict_yolo26_pose.sh
+```
+
+当前预测输出：
 
 ```text
-runs/yolo26_pose_predict/
+runs/export_5pt_pose_long_800e_p200_predict/
 ```
 
 验收重点：
 
-- bbox 是否框住完整 `sentry`。
-- 8 个 keypoints 是否都在正确位置。
-- keypoint 顺序是否稳定。
-- 是否错误输出了遮挡、出画或不完整目标。
-
-## 权重输出
-
-训练完成后主要使用：
-
-```text
-runs/yolo26_pose_train/weights/best.pt
-```
-
-建议按版本另存：
-
-```text
-sentry_pose_v001.pt
-sentry_pose_v002.pt
-sentry_pose_v003.pt
-```
-
-`.pt` 权重不提交到 Git。
-
-## 标注工作流
-
-同事标注、负责人验收、本机训练的详细流程见：
-
-```text
-docs/sentry_annotation_workflow.md
-```
-
-推荐方式：
-
-```text
-本机部署 CVAT -> 同事通过 Tailscale 浏览器访问 -> 同事标注 -> 负责人验收 -> 导出 YOLO-Pose -> 本机训练 -> 输出 best.pt
-```
-
-当前 CVAT 访问地址：
-
-```text
-http://100.90.129.85:8080
-```
-
-CVAT 运行在 `/home/kellen/cvat`，当前 `.env` 使用：
-
-```text
-CVAT_HOST=100.90.129.85
-```
-
-管理员常用命令：
-
-```bash
-cd ~/cvat
-sudo docker compose ps
-sudo docker compose up -d
-sudo docker compose logs -f
-```
-
-## 环境复现
-
-已导出三份环境文件：
-
-```text
-environment-yolo26.yaml
-requirements-yolo26.txt
-conda-yolo26-explicit.txt
-```
-
-常用恢复方式：
-
-```bash
-/home/kellen/anaconda3/bin/conda env create -f environment-yolo26.yaml
-```
-
-更严格的 Conda 显式包列表恢复可参考：
-
-```bash
-/home/kellen/anaconda3/bin/conda create --name yolo26 --file conda-yolo26-explicit.txt
-```
+- bbox 是否框住目标。
+- 5 个 keypoints 是否都在正确位置。
+- 背景图是否不输出误检。
+- 如果发现漏标，先修 label，再重新清洗/训练；不要把应标目标当背景样本训练。
 
 ## Git 说明
 
@@ -208,4 +227,4 @@ __pycache__/
 .ipynb_checkpoints/
 ```
 
-不要提交训练产物、模型权重、cache 文件。应提交文档、脚本、环境清单和数据集配置。
+不要提交训练产物、模型权重、cache 文件。应提交文档、脚本、环境清单、数据集配置和需要版本化的数据集文件。

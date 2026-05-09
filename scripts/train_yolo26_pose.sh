@@ -4,10 +4,11 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CONDA_ROOT="${CONDA_ROOT:-/home/kellen/anaconda3}"
 YOLO="${CONDA_ROOT}/envs/yolo26/bin/yolo"
-DATA="${DATA:-${REPO_ROOT}/export_sentry_1_240_yolo/meta/dataset.local.yaml}"
+DATA="${DATA:-${REPO_ROOT}/export_5pt_pose_yolo/meta/dataset.local.yaml}"
 PROJECT="${PROJECT:-${REPO_ROOT}/runs}"
 MODEL="${MODEL:-${REPO_ROOT}/yolo26n-pose.pt}"
 EPOCHS="${EPOCHS:-100}"
+PATIENCE="${PATIENCE:-100}"
 IMGSZ="${IMGSZ:-640}"
 BATCH="${BATCH:-96}"
 DEVICE="${DEVICE:-0}"
@@ -19,6 +20,7 @@ NAME="${NAME:-yolo26_pose_train}"
   model="${MODEL}" \
   data="${DATA}" \
   epochs="${EPOCHS}" \
+  patience="${PATIENCE}" \
   imgsz="${IMGSZ}" \
   batch="${BATCH}" \
   device="${DEVICE}" \
@@ -26,4 +28,5 @@ NAME="${NAME:-yolo26_pose_train}"
   cache="${CACHE}" \
   project="${PROJECT}" \
   name="${NAME}" \
-  exist_ok=True
+  exist_ok=True \
+  "$@"

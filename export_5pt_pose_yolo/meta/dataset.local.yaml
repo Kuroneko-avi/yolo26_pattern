@@ -1,0 +1,9 @@
+path: /home/kellen/yolo26_pattern/export_5pt_pose_yolo
+train: images/train
+val: images/val
+
+nc: 1
+names:
+  0: 大符标注
+
+kpt_shape: [5, 3]
