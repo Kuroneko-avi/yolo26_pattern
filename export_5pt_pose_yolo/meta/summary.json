@@ -18,16 +18,21 @@
       "images_used": 47,
       "objects": 94,
       "background_images": 0
+    },
+    "fan": {
+      "package": "/home/kellen/下载/第一组Fan.zip",
+      "images_used": 27,
+      "objects": 54,
+      "background_images": 0
+    },
+    "suiruihan": {
+      "package": "/home/kellen/下载/第一组Suiruihan.zip",
+      "images_used": 27,
+      "objects": 54,
+      "background_images": 0
     }
   },
   "backgrounds": [
-    {
-      "source": "job72",
-      "package": "/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip",
-      "image_member": "images/train/screenshot-95.png",
-      "label_member": "labels/train/screenshot-95.txt",
-      "reason": "confirmed_background_missing_label"
-    },
     {
       "source": "job72",
       "package": "/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip",
@@ -48,15 +53,22 @@
       "image_member": "images/train/screenshot-98.png",
       "label_member": "labels/train/screenshot-98.txt",
       "reason": "confirmed_background_missing_label"
+    },
+    {
+      "source": "job72",
+      "package": "/home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip",
+      "image_member": "images/train/screenshot-95.png",
+      "label_member": "labels/train/screenshot-95.txt",
+      "reason": "confirmed_background_missing_label"
     }
   ],
-  "total_images": 100,
-  "total_objects": 192,
+  "total_images": 154,
+  "total_objects": 300,
   "background_images": 4,
   "splits": {
     "train": {
-      "images": 81,
-      "objects": 156,
+      "images": 135,
+      "objects": 264,
       "background_images": 3
     },
     "val": {

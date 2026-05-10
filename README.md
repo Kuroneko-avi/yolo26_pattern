@@ -18,16 +18,18 @@ export_5pt_pose_yolo/
 /home/kellen/下载/job_72_dataset_2026_05_09_08_42_30_ultralytics yolo pose 1.0.zip
 /home/kellen/下载/第一组WU_1.zip
 /home/kellen/下载/第一组WU_2.zip
+/home/kellen/下载/第一组Fan.zip
+/home/kellen/下载/第一组Suiruihan.zip
 ```
 
 清洗结果：
 
 ```text
-total_images=100
-total_objects=192
+total_images=154
+total_objects=300
 background_images=4
-train_images=81
-train_objects=156
+train_images=135
+train_objects=264
 train_background_images=3
 val_images=19
 val_objects=36
@@ -158,7 +160,7 @@ EPOCHS=300 PATIENCE=0 BATCH=64 bash scripts/train_yolo26_pose.sh cos_lr=True
 最新长轮次训练：
 
 ```text
-runs/export_5pt_pose_long_800e_p200/
+runs/export_5pt_pose_fan_suiruihan_800e_p200/
 ```
 
 训练配置：
@@ -166,21 +168,22 @@ runs/export_5pt_pose_long_800e_p200/
 ```text
 epochs=800
 patience=200
-实际早停=205 epochs
-best epoch=5
+实际早停=201 epochs
+best epoch=1
+初始化权重=runs/export_5pt_pose_long_800e_p200/weights/best.pt
 ```
 
 权重：
 
 ```text
-runs/export_5pt_pose_long_800e_p200/weights/best.pt
+runs/export_5pt_pose_fan_suiruihan_800e_p200/weights/best.pt
 ```
 
 最终验证结果：
 
 ```text
-Box(P,R,mAP50,mAP50-95)=0.917,0.972,0.985,0.931
-Pose(P,R,mAP50,mAP50-95)=0.917,0.972,0.985,0.985
+Box(P,R,mAP50,mAP50-95)=0.917,0.972,0.986,0.932
+Pose(P,R,mAP50,mAP50-95)=0.917,0.972,0.986,0.986
 ```
 
 ## 预测验收
@@ -205,7 +208,7 @@ bash scripts/predict_yolo26_pose.sh
 当前预测输出：
 
 ```text
-runs/export_5pt_pose_long_800e_p200_predict/
+runs/export_5pt_pose_fan_suiruihan_800e_p200_predict/
 ```
 
 验收重点：
